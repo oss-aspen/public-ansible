@@ -40,3 +40,10 @@
     dest: "{{ config_data_mount_point }}"
     mode: "0644"
   become: true
+
+- name: Copy rabbitmq config
+  ansible.builtin.copy:
+    src: files/rabbitmq-advanced.config
+    dest: "{{ config_data_mount_point }}"
+    mode: "0644"
+  become: true
