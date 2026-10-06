@@ -34,9 +34,9 @@
     owner: root
   become: true
 
-- name: Copy augur.json
+- name: Copy collectoss.json
   ansible.builtin.copy:
-    src: files/augur.json
+    src: files/collectoss.json
     dest: "{{ config_data_mount_point }}"
     mode: "0644"
   become: true
