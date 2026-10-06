@@ -15,7 +15,7 @@ pg_container_user: "augur"
 pg_container_db_name: collectoss
 pg_password: "{{ vault_augur_password }}"
 
-docker_pull_version: "v1.1.0-rc1"
+docker_pull_version: "v1.1.0-rc2"
 docker_tag_version: "{{ docker_pull_version  | replace('/', '-') }}"
 
 rabbit_username: augur
