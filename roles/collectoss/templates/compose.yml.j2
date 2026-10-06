@@ -51,10 +51,16 @@ services:
       - collectoss
 
   rabbitmq:
-    image: augur-rabbitmq:v1.0.0
+    image: rabbitmq:4.1-management-alpine
     restart: unless-stopped
     networks:
       - collectoss
+    environment:
+      - RABBITMQ_DEFAULT_USER=${COLLECTOSS_RABBITMQ_USERNAME:-augur}
+      - RABBITMQ_DEFAULT_PASS=${COLLECTOSS_RABBITMQ_PASSWORD:-password123}
+      - RABBITMQ_DEFAULT_VHOST=${COLLECTOSS_RABBITMQ_VHOST:-collectoss_vhost}
+    volumes:
+     - {{ config_data_mount_point }}/rabbitmq-advanced.config:/etc/rabbitmq/advanced.config:ro,Z
     healthcheck:
       test: ["CMD", "rabbitmq-diagnostics", "ping"]
       interval: 10s
