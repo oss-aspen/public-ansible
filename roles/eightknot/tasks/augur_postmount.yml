@@ -112,6 +112,9 @@
       - username: grafana_monitoring
         password: "{{ bot_account_grafana_password }}"
         groups: collectoss_read_only,pg_read_all_stats
+      - username: orgpulse_service_acct
+        password: "{{ bot_account_orgpulse_password }}"
+        groups: collectoss_read_only
 # Create research accounts
 # same as above but possibly referencing a static password hash in another file
 

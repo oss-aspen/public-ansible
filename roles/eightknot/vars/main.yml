@@ -36,3 +36,4 @@ new_volume_type: "gp3" # Optional: Type of the new EBS volume (e.g., gp2, gp3, i
 # Bot accounts with postgres access
 bot_account_publishing_password: "{{ vault_bot_account_publishing_password }}"
 bot_account_grafana_password: "{{ vault_bot_account_grafana_password }}"
+bot_account_orgpulse_password: "{{ vault_bot_account_orgpulse_password }}"
