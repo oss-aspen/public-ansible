@@ -2,4 +2,4 @@ compose_path: /opt/compose/caddy/
 config_path: /opt/caddy/
 
 #eightknot.osci.io
-public_hostname: "{{ inventory_hostname }}"
+primary_hostname: "{{ inventory_hostname }}"
