@@ -1,5 +1,5 @@
 compose_path: /opt/compose/caddy/
 config_path: /opt/caddy/
 
-#eightknot.osci.io
 primary_hostname: "{{ inventory_hostname }}"
+secondary_hostname: "eightknot.osci.io"
