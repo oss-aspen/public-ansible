@@ -1,5 +1,11 @@
 {{ primary_hostname }} {
 
+    reverse_proxy reverse-proxy:8080
+
+}
+
+{{ secondary_hostname }} {
+
 # Proxy tracking script
     handle /a.js {
         #rewrite * /matomo.js
